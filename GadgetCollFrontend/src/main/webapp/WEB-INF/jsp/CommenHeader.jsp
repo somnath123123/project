@@ -93,12 +93,13 @@
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="#">Om-Mart</a>
+      <a class="navbar-brand" href="#">Om-Mobile shop</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index">Home</a></li>
         <c:if test="${flag==0}">
+       
         <li><a href="SignIn">Login</a></li>
         <li><a href="SignUp">Register</a></li>
         <li><a href="AboutUs">About Us</a></li>

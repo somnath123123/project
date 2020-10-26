@@ -16,7 +16,7 @@
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 		<form role="form">
 			<fieldset>
-				<h2>Please Sign In</h2>
+				<h2>Please Sign Up</h2>
 				<hr class="colorgraph">
 				<div class="form-group">
                     <input type="text" name="first_name" id="text" class="form-control input-lg" placeholder="First Name">

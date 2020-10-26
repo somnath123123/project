@@ -21,19 +21,19 @@
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Password</td>
-		<td><textarea rows="5" cols="30" name="pass"></textarea></td>
+		<td><input type="text" name="password"/></td>
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Customer Name</td>
-		<td><textarea rows="5" cols="30" name="custName"></textarea></td>
+		<td><input type="text" name="customerName"/></td>
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Email ID</td>
-		<td><textarea rows="5" cols="30" name="emailId"></textarea></td>
+		<td><input type="text" name="emailId"/></td>
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Mobile No</td>
-		<td><textarea rows="5" cols="30" name="mobileNo"></textarea></td>
+		<td><input type="text" name="mobileNo"/></td>
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Customer Address</td>
@@ -41,7 +41,7 @@
 	</tr>
 	<tr bgcolor="cyan">
 		<td>Role</td>
-		<td><textarea rows="5" cols="30" name="role"></textarea></td>
+		<td><input type="text" name="role"/></td>
 	</tr>
 	<tr bgcolor="pink">
 		<td colspan="2" align="center">

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ecomm.dao.ProductDAO;
-
 import com.ecomm.entity.Product;
+
 
 
 @Controller
@@ -31,11 +31,15 @@ public class ProductController
 	}
 	
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertproduct(@RequestParam("prodName")String productName,@RequestParam("prodDesc")String productDesc,Model m)
+	public String insertproduct(@RequestParam("prodName")String productName,@RequestParam("prodDesc")String productDesc,@RequestParam("catId")int categoryId,@RequestParam("supId")int supplierId,@RequestParam("prc")int price,@RequestParam("stc")int stock ,Model m)
 	{
 		Product productObj=new Product();
 		productObj.setProductName(productName);
 		productObj.setProductDesc(productDesc);
+		productObj.setCategoryId(categoryId);
+		productObj.setSupplierId(supplierId);
+		productObj.setPrice(price);
+		productObj.setStock(stock);
 		
 		productDAO.addProduct(productObj);
 		
@@ -46,11 +50,15 @@ public class ProductController
 	}
 	
 	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
-	public String updateproduct(@RequestParam("prodId")int productId,@RequestParam("prodName")String productName,@RequestParam("prodDesc")String productDesc,Model m)
+	public String updateproduct(@RequestParam("prodId")int productId,@RequestParam("prodName")String productName,@RequestParam("prodDesc")String productDesc,@RequestParam("catId")int categoryId,@RequestParam("supId")int supplierId,@RequestParam("prc")int price,@RequestParam("stc")int stock ,Model m)
 	{
 		Product productObj=productDAO.getProduct(productId);
 		productObj.setProductName(productName);
 		productObj.setProductDesc(productDesc);
+		productObj.setCategoryId(categoryId);
+		productObj.setSupplierId(supplierId);
+		productObj.setPrice(price);
+		productObj.setStock(stock);
 		
 		productDAO.updateProduct(productObj);
 		
@@ -77,6 +85,6 @@ public class ProductController
 	{
 		Product productObj=productDAO.getProduct(productId);
 		m.addAttribute("product", productObj);
-		return "ProductUpdate";
+		return "UpdateProduct";
 	}
 }

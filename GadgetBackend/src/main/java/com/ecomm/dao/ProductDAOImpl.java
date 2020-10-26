@@ -18,6 +18,7 @@ public class ProductDAOImpl implements ProductDAO
 {
 	@Autowired
 	SessionFactory sessionFactory;
+	@Override
 	public boolean addProduct(Product product) {
 		try
 		{
@@ -29,7 +30,7 @@ public class ProductDAOImpl implements ProductDAO
 			return false;
 		}
 	}
-
+	@Override
 	public boolean deleteProduct(Product product) {
 		try
 		{
@@ -41,7 +42,7 @@ public class ProductDAOImpl implements ProductDAO
 			return false;
 		}
 	}
-
+	@Override
 	public boolean updateProduct(Product product) {
 		try
 		{
@@ -53,14 +54,14 @@ public class ProductDAOImpl implements ProductDAO
 			return false;
 		}
 	}
-
+	@Override
 	public List<Product> getProductDetails() {
 		Session session=sessionFactory.openSession();
 		List<Product> productList=session.createQuery("from Product").list();
 		session.close();
 		return productList;
 	}
-
+	@Override
 	public Product getProduct(int productId) {
 		Session session=sessionFactory.openSession();
 		Product product=session.get(Product.class,productId);

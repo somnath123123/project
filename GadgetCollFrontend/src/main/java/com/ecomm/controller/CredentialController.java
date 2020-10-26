@@ -28,5 +28,10 @@ public class CredentialController
 	{
 		return "ContactUs";
 	}
+	@RequestMapping(value="/Home")
+	public String Home()
+	{
+		return "Home";
+	}
 	
 }
